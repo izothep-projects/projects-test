@@ -39,6 +39,10 @@ jobs:
         cd utils
         npm i
 
+    - name: Run utils
+      run: |
+        node utils/server &
+
     - name: Update Chrome
       if: ${{ runner.os == 'Linux' }}
       run: |
